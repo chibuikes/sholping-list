@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Complete JavaScript Course</title>
+ <style>
+@media(max-width:500px){
+}
+@media(min-width:510px){
+}
+ </style>
+</head>
+<body>
+ <div id="message" >Complete JavaScript Course</div>
+ <div>
+ <input type="text" id="addItem">
+ <input type="button" id="addNew" value="Add to List" > </div>
+  <div id="output">
+ <h1 >Shopping List</h1>
+ <ol id="list"> </ol>
+ </div>
+ 
+ <script>
+ 
+ function cap(){
+  // let el=document.getElementsByTagName("div").item(1).innerText
+let o=document.getElementById("addItem").value
+//let oi=document.getElementsByTagName("input").item(0).value
+   let elem= document.createElement("li")
+   elem.innerText=o;
+  
+document.getElementById("list").appendChild(elem)
+ }
+   document.getElementById("addNew").addEventListener("click",cap)
+ function del() {
+  this.innerText=" "
+  
+ 
+ }
+ 
+ let s = document.getElementsByTagName("ol")
+ 
+ for(let i = 0; i < s.length; i++){
+   s.item(i).addEventListener("click",del)
+ }
+
+ </script>
+ 
+</body>
+</html>
+ <!--
+ m.-->
